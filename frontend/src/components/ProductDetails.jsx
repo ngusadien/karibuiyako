@@ -14,7 +14,7 @@ const ProductDetails = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`http://localhost:3000/a/products/${id}`);
+        const res = await fetch(`http://0.0.0.0:10000/a/products/${id}`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -57,7 +57,7 @@ const ProductDetails = () => {
           {selectedImage && (
             <div className="mb-4 rounded-lg overflow-hidden">
               <img
-                src={`http://localhost:3000/${selectedImage}`}
+                src={`http://0.0.0.0:10000/${selectedImage}`}
                 alt={product.productName}
                 className="w-full h-auto object-cover aspect-square"
               />
@@ -68,7 +68,7 @@ const ProductDetails = () => {
               {product.images.map((img, i) => (
                 <img
                   key={i}
-                  src={`http://localhost:3000/${img.replace(/\\/g, '/')}`}
+                  src={`http://0.0.0.0:10000/${img.replace(/\\/g, '/')}`}
                   alt={`product-${i}`}
                   className={`w-20 h-20 object-cover rounded-md cursor-pointer ${
                     selectedImage === img.replace(/\\/g, '/') ? 'border-2 border-blue-500' : ''
