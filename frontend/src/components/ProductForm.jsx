@@ -22,7 +22,7 @@ const ProductForm = () => {
     }
 
     // Verify token with backend
-    fetch('http://localhost:3000/api/verify-token/protected', {
+    fetch('http://0.0.0.0:10000/api/verify-token/protected', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
