@@ -17,7 +17,7 @@ import protectedRoute from './routes/protected.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 const DATABASE_URI = process.env.DATABASE_URI;
 
 if (!DATABASE_URI) {
