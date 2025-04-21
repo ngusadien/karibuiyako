@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
           {product.images?.map((img, index) => (
             <img
               key={index}
-              src={`http://localhost:3000/${img.replace(/\\/g, "/")}`}
+              src={`http://0.0.0.0/10000${img.replace(/\\/g, "/")}`}
               alt={`product-${product.productName}-${index}`}
               className="w-full h-full object-cover flex-shrink-0"
             />
