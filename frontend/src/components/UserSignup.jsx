@@ -18,7 +18,7 @@ const UserSignup = () => {
     setMessage('');
 
     try {
-      const response = await fetch('http://0.0.0.0:10000/api/auth/signup', {
+      const response = await fetch('https://0.0.0.0:10000/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

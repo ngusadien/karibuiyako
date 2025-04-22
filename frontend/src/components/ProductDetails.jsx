@@ -14,7 +14,7 @@ const ProductDetails = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`http://0.0.0.0:10000/a/products/${id}`);
+        const res = await fetch(`https://0.0.0.0:10000/a/products/${id}`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -68,7 +68,7 @@ const ProductDetails = () => {
               {product.images.map((img, i) => (
                 <img
                   key={i}
-                  src={`http://0.0.0.0:10000/${img.replace(/\\/g, '/')}`}
+                  src={`https://0.0.0.0:10000/${img.replace(/\\/g, '/')}`}
                   alt={`product-${i}`}
                   className={`w-20 h-20 object-cover rounded-md cursor-pointer ${
                     selectedImage === img.replace(/\\/g, '/') ? 'border-2 border-blue-500' : ''

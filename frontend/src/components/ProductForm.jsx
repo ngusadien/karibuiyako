@@ -22,7 +22,7 @@ const ProductForm = () => {
     }
 
     // Verify token with backend
-    fetch('http://0.0.0.0:10000/api/verify-token/protected', {
+    fetch('https://0.0.0.0:10000/api/verify-token/protected', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -63,7 +63,7 @@ const ProductForm = () => {
       formData.append('category', category);
       images.forEach((image) => formData.append('images', image));
 
-      const response = await fetch('http://0.0.0.0:10000/api/products', {
+      const response = await fetch('https://0.0.0.0:10000/api/products', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('jwt-token')}`, // Include token here

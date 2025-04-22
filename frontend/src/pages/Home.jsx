@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://0.0.0.0:10000/a/products'); // <- make sure this is correct
+        const res = await fetch('https://0.0.0.0:10000/a/products'); // <- make sure this is correct
         const data = await res.json();
         setProducts(data);
       } catch (err) {
