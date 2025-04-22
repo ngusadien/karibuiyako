@@ -7,4 +7,9 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  preview: {
+    port: process.env.PORT || 4173,
+    host: true,
+    allowedHosts: ['karibuyako-front.onrender.com']
+  }
 })
