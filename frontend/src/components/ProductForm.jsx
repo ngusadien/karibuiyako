@@ -63,7 +63,7 @@ const ProductForm = () => {
       formData.append('category', category);
       images.forEach((image) => formData.append('images', image));
 
-      const response = await fetch('http://localhost:3000/api/products', {
+      const response = await fetch('http://0.0.0.0:10000/api/products', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('jwt-token')}`, // Include token here
