@@ -24,6 +24,13 @@ if (!DATABASE_URI) {
   console.error('DATABASE_URI is missing from environment variables.');
   process.exit(1);
 }
+//allow frontent
+const allowedOrigins = ['https://karibuyako-front.onrender.com']
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}))
 
 // ES Module __dirname workaround
 const __filename = fileURLToPath(import.meta.url);
