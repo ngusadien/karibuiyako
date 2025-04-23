@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../index.css';
 
 const UserSignup = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });

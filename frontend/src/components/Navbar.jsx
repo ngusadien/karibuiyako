@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CiShoppingCart } from "react-icons/ci";
 import { FaRegUser, FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import '../index.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
